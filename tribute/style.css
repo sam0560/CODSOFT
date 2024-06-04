@@ -1,0 +1,161 @@
+:root {
+    --primary-color: #1E1E1E;
+    --secondary-color: #D81E5B;
+    --background-color-1: #F4F4F9;
+    --font-color: #333333;
+    --font-color-coffee: #C6A66E;
+    --heading-font-family: 'Arial', sans-serif;
+    --body-font-family: 'Verdana', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font-family);
+    background-color: var(--background-color-1);
+    color: var(--font-color);
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    filter: grayscale(90%);
+}
+
+.container {
+    max-width: 65rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: var(--heading-font-family);
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    font-family: var(--heading-font-family);
+    color: var(--background-color-1);
+}
+
+.hero {
+    width: 100%;
+}
+
+.quote {
+    width: 100%;
+    padding: 4rem 0;
+}
+
+.quote>div {
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.qcont {
+    max-width: 600px;
+    width: 100%;
+}
+
+q {
+    font-size: 1.5em;
+    font-weight: 700;
+    position: absolute;
+    top: 70px;
+    left: 20rem;
+    width: 450px;
+}
+
+.qauthor {
+    color: var(--font-color-coffee);
+}
+
+/* About */
+.about {
+    width: 100%;
+}
+
+.aboutText {
+    background-color: var(--primary-color);
+    color: var(--background-color-1);
+
+    >.txt {
+        padding: 8rem 4rem;
+        font-size: 20px;
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+/* Achievement */
+.ach {
+    h2 {
+        text-align: center;
+        color: #1c1b1b;
+        padding: 4rem 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    img {
+        filter: grayscale(50%);
+    }
+}
+
+/* Gallery */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-bottom: 8rem;
+
+    img {
+        width: 100%;
+        max-height: 240px;
+        height: 100%;
+        filter: grayscale(90%);
+    }
+}
+
+.grid > img:hover{
+    filter: grayscale(50%);
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+
+footer{
+    background: var(--primary-color);
+    color: var(--background-color-1);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    p {
+        padding: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 65rem) {
+    q {
+        left: 80px;
+    }
+
+    .aboutText {
+        >p {
+            padding: 4rem 1rem;
+        }
+
+    }
+}
